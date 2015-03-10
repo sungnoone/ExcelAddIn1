@@ -38,12 +38,8 @@
             this.group1 = this.Factory.CreateRibbonGroup();
             this.button1 = this.Factory.CreateRibbonButton();
             this.group2 = this.Factory.CreateRibbonGroup();
-            this.button2 = this.Factory.CreateRibbonButton();
-            this.button3 = this.Factory.CreateRibbonButton();
-            this.button4 = this.Factory.CreateRibbonButton();
             this.tab1.SuspendLayout();
             this.group1.SuspendLayout();
-            this.group2.SuspendLayout();
             // 
             // tab1
             // 
@@ -61,35 +57,14 @@
             // 
             // button1
             // 
-            this.button1.Label = "注音字檢核";
+            this.button1.Label = "破音字標註";
             this.button1.Name = "button1";
             this.button1.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button1_Click);
             // 
             // group2
             // 
-            this.group2.Items.Add(this.button2);
-            this.group2.Items.Add(this.button3);
-            this.group2.Items.Add(this.button4);
             this.group2.Label = "測試";
             this.group2.Name = "group2";
-            // 
-            // button2
-            // 
-            this.button2.Label = "Hello";
-            this.button2.Name = "button2";
-            this.button2.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Label = "查詢全部生字";
-            this.button3.Name = "button3";
-            this.button3.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.Label = "新增生字到資料庫";
-            this.button4.Name = "button4";
-            this.button4.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button4_Click);
             // 
             // Ribbon1
             // 
@@ -101,8 +76,6 @@
             this.tab1.PerformLayout();
             this.group1.ResumeLayout(false);
             this.group1.PerformLayout();
-            this.group2.ResumeLayout(false);
-            this.group2.PerformLayout();
 
         }
 
@@ -112,9 +85,6 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup group1;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton button1;
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup group2;
-        internal Microsoft.Office.Tools.Ribbon.RibbonButton button2;
-        internal Microsoft.Office.Tools.Ribbon.RibbonButton button3;
-        internal Microsoft.Office.Tools.Ribbon.RibbonButton button4;
     }
 
     partial class ThisRibbonCollection
