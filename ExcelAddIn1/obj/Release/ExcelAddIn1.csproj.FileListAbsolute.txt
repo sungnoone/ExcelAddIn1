@@ -8,4 +8,6 @@ E:\projects\ExcelAddIn1\ExcelAddIn1\obj\Release\ExcelAddIn1.Ribbon1.resources
 E:\projects\ExcelAddIn1\ExcelAddIn1\obj\Release\ExcelAddIn1.csproj.GenerateResource.Cache
 E:\projects\ExcelAddIn1\ExcelAddIn1\obj\Release\ExcelAddIn1.dll
 E:\projects\ExcelAddIn1\ExcelAddIn1\obj\Release\ExcelAddIn1.pdb
-E:\projects\ExcelAddIn1\ExcelAddIn1\obj\Release\ExcelAddIn1.csprojResolveAssemblyReference.cache
+E:\projects\ExcelAddIn1\ExcelAddIn1\bin\Release\Newtonsoft.Json.dll
+E:\projects\ExcelAddIn1\ExcelAddIn1\bin\Release\Newtonsoft.Json.xml
+E:\projects\ExcelAddIn1\ExcelAddIn1\obj\Release\ExcelAddIn1.UserControl1.resources

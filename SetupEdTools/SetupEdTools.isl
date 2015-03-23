@@ -2606,7 +2606,7 @@
 		<col def="I2">ISSetupLocation</col>
 		<col def="S255">ISReleaseFlags</col>
 		<row><td>_04A07C72_A96C_472B_A864_58B236F3FC6A_</td><td>Microsoft .NET Framework 4.5 Web.prq</td><td/><td/><td/></row>
-		<row><td>_080968A1_70A1_4254_B5C9_F06E640FA081_</td><td>Visual Studio 2010 Tools for Office Runtime.prq</td><td/><td/><td/></row>
+		<row><td>_47E4646A_AABC_459D_A5D6_EABA4E002C99_</td><td>Visual Studio 2010 Tools for Office Runtime.prq</td><td/><td/><td/></row>
 		<row><td>_E6C6E88A_5E00_41D8_9E65_14C458ACED41_</td><td>Microsoft .NET Framework 4.5 Full.prq</td><td/><td/><td/></row>
 	</table>
 
@@ -4288,7 +4288,6 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col key="yes" def="s72">Property</col>
 		<col def="L0">Value</col>
 		<col def="S255">ISComments</col>
-		<row><td>ALLUSERS</td><td>1</td><td/></row>
 		<row><td>ARPINSTALLLOCATION</td><td/><td/></row>
 		<row><td>ARPPRODUCTICON</td><td>ARPPRODUCTICON.exe</td><td/></row>
 		<row><td>ARPSIZE</td><td/><td/></row>
