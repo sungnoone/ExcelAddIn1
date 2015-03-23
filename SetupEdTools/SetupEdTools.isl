@@ -53,7 +53,7 @@
 		<codepage>1252</codepage>
 		<title>Installation Database</title>
 		<subject></subject>
-		<author>InstallShield</author>
+		<author>##ID_STRING3##</author>
 		<keywords>Installer,MSI,Database</keywords>
 		<comments>Contact:  Your local administrator</comments>
 		<template>Intel;1033</template>
@@ -339,7 +339,7 @@
 		<col def="S0">ISDotNetInstallerArgsCommit</col>
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
-		<row><td>Component</td><td>{C159913F-6EAA-4FD4-BBFF-CAE55D98CB95}</td><td>INSTALLDIR</td><td>2</td><td/><td>File</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Component1</td><td>{E18B4AFB-DE32-49AF-8633-EF52CEA81448}</td><td>INSTALLDIR</td><td>2</td><td/><td>File1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{A5B83BB2-BCFD-4E73-95D0-719928F41AF5}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
@@ -1857,7 +1857,7 @@
 	<table name="FeatureComponents">
 		<col key="yes" def="s38">Feature_</col>
 		<col key="yes" def="s72">Component_</col>
-		<row><td>AlwaysInstall</td><td>Component</td></row>
+		<row><td>AlwaysInstall</td><td>Component1</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
 	</table>
 
@@ -1873,7 +1873,7 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
-		<row><td>File</td><td>Component</td><td>ExcelAddIn1.主要輸出</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ExcelAddIn1&gt;|Built</td><td>3</td><td/></row>
+		<row><td>File1</td><td>Component1</td><td>ExcelAddIn1.主要輸出</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ExcelAddIn1&gt;|Built</td><td>3</td><td/></row>
 		<row><td>exceladdin1.dll.manifest</td><td>ISX_DEFAULTCOMPONENT</td><td>EXCELA~1.MAN|ExcelAddIn1.dll.manifest</td><td>0</td><td/><td/><td/><td>1</td><td>E:\projects\ExcelAddIn1\ExcelAddIn1\bin\Release\ExcelAddIn1.dll.manifest</td><td>1</td><td/></row>
 		<row><td>exceladdin1.vsto</td><td>ISX_DEFAULTCOMPONENT</td><td>EXCELA~1.VST|ExcelAddIn1.vsto</td><td>0</td><td/><td/><td/><td>1</td><td>E:\projects\ExcelAddIn1\ExcelAddIn1\bin\Release\ExcelAddIn1.vsto</td><td>1</td><td/></row>
 	</table>
@@ -2019,7 +2019,7 @@
 		<col def="S0">FTPLocation</col>
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
-		<row><td>Component</td><td/><td/><td>_FD1DDBAE_D921_4F8A_BEE9_5EAE030A65FE_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Component1</td><td/><td/><td>_6938BA87_7462_4448_A326_4E506ABD004F_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_D1D454F5_8D6F_4A14_8AB0_958755ED120D_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
@@ -2605,6 +2605,7 @@
 		<col def="I2">Order</col>
 		<col def="I2">ISSetupLocation</col>
 		<col def="S255">ISReleaseFlags</col>
+		<row><td>_04A07C72_A96C_472B_A864_58B236F3FC6A_</td><td>Microsoft .NET Framework 4.5 Web.prq</td><td/><td/><td/></row>
 		<row><td>_080968A1_70A1_4254_B5C9_F06E640FA081_</td><td>Visual Studio 2010 Tools for Office Runtime.prq</td><td/><td/><td/></row>
 		<row><td>_E6C6E88A_5E00_41D8_9E65_14C458ACED41_</td><td>Microsoft .NET Framework 4.5 Full.prq</td><td/><td/><td/></row>
 	</table>
@@ -2640,7 +2641,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1033</td><td>Your Company Name</td><td>0</td><td/><td>505557775</td></row>
+		<row><td>COMPANY_NAME</td><td>1033</td><td>HL</td><td>0</td><td/><td>-1985758711</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1033</td><td>Always Install</td><td>0</td><td/><td>505557775</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1033</td><td>The color settings of your system are not adequate for running [ProductName].</td><td>0</td><td/><td>505557775</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_OS</td><td>1033</td><td>The operating system is not adequate for running [ProductName].</td><td>0</td><td/><td>505557775</td></row>
@@ -3741,6 +3742,8 @@
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>505557775</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>505557775</td></row>
 		<row><td>ID_STRING1</td><td>1033</td><td/><td>0</td><td/><td>505559823</td></row>
+		<row><td>ID_STRING2</td><td>1033</td><td>http://www.HL.com</td><td>0</td><td/><td>-1985746423</td></row>
+		<row><td>ID_STRING3</td><td>1033</td><td>HL</td><td>0</td><td/><td>-1985758711</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>505557775</td></row>
 	</table>
 
@@ -3981,7 +3984,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ISTheme</td><td>InstallShield Blue.theme</td></row>
 		<row><td>ISUSLock</td><td>{17BDD2A7-D106-4465-A89D-B6C9B5192CFF}</td></row>
 		<row><td>ISUSSignature</td><td>{3D2E8DB2-8311-4B8C-A57F-F059BD4C2A33}</td></row>
-		<row><td>ISVisitedViews</td><td>viewAssistant,viewObjects,viewProject,viewRelease,viewFeatureFiles</td></row>
+		<row><td>ISVisitedViews</td><td>viewAssistant,viewObjects,viewProject,viewRelease,viewFeatureFiles,viewRealSetupDesign</td></row>
 		<row><td>Limited</td><td>1</td></row>
 		<row><td>LockPermissionMode</td><td>1</td></row>
 		<row><td>MsiExecCmdLineOptions</td><td/></row>
@@ -4289,6 +4292,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ARPINSTALLLOCATION</td><td/><td/></row>
 		<row><td>ARPPRODUCTICON</td><td>ARPPRODUCTICON.exe</td><td/></row>
 		<row><td>ARPSIZE</td><td/><td/></row>
+		<row><td>ARPURLINFOABOUT</td><td>##ID_STRING2##</td><td/></row>
 		<row><td>AgreeToLicense</td><td>No</td><td/></row>
 		<row><td>ApplicationUsers</td><td>AllUsers</td><td/></row>
 		<row><td>DWUSINTERVAL</td><td>30</td><td/></row>

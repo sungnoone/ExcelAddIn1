@@ -6,9 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelAddIn1", "ExcelAddIn1\ExcelAddIn1.csproj", "{566C6FCE-EFD2-415D-8F56-8A5A4F2FF196}"
 EndProject
 Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "SetupEdTools", "SetupEdTools\SetupEdTools.isproj", "{7D17086E-953F-4B8D-B0A3-5A0A32A5E3F0}"
-	ProjectSection(ProjectDependencies) = postProject
-		{566C6FCE-EFD2-415D-8F56-8A5A4F2FF196} = {566C6FCE-EFD2-415D-8F56-8A5A4F2FF196}
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

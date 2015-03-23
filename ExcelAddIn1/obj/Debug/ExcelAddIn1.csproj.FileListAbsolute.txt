@@ -3,12 +3,12 @@ E:\projects\ExcelAddIn1\ExcelAddIn1\bin\Debug\ExcelAddIn1.pdb
 E:\projects\ExcelAddIn1\ExcelAddIn1\bin\Debug\ExcelAddIn1.dll.manifest
 E:\projects\ExcelAddIn1\ExcelAddIn1\bin\Debug\ExcelAddIn1.vsto
 E:\projects\ExcelAddIn1\ExcelAddIn1\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+E:\projects\ExcelAddIn1\ExcelAddIn1\bin\Debug\Newtonsoft.Json.dll
+E:\projects\ExcelAddIn1\ExcelAddIn1\bin\Debug\Newtonsoft.Json.xml
 E:\projects\ExcelAddIn1\ExcelAddIn1\obj\Debug\ExcelAddIn1.csprojResolveAssemblyReference.cache
 E:\projects\ExcelAddIn1\ExcelAddIn1\obj\Debug\ExcelAddIn1.Properties.Resources.resources
 E:\projects\ExcelAddIn1\ExcelAddIn1\obj\Debug\ExcelAddIn1.Ribbon1.resources
+E:\projects\ExcelAddIn1\ExcelAddIn1\obj\Debug\ExcelAddIn1.UserControl1.resources
 E:\projects\ExcelAddIn1\ExcelAddIn1\obj\Debug\ExcelAddIn1.csproj.GenerateResource.Cache
 E:\projects\ExcelAddIn1\ExcelAddIn1\obj\Debug\ExcelAddIn1.dll
 E:\projects\ExcelAddIn1\ExcelAddIn1\obj\Debug\ExcelAddIn1.pdb
-E:\projects\ExcelAddIn1\ExcelAddIn1\bin\Debug\Newtonsoft.Json.dll
-E:\projects\ExcelAddIn1\ExcelAddIn1\bin\Debug\Newtonsoft.Json.xml
-E:\projects\ExcelAddIn1\ExcelAddIn1\obj\Debug\ExcelAddIn1.UserControl1.resources
