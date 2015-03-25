@@ -11,3 +11,4 @@ E:\projects\ExcelAddIn1\ExcelAddIn1\obj\Release\ExcelAddIn1.pdb
 E:\projects\ExcelAddIn1\ExcelAddIn1\bin\Release\Newtonsoft.Json.dll
 E:\projects\ExcelAddIn1\ExcelAddIn1\bin\Release\Newtonsoft.Json.xml
 E:\projects\ExcelAddIn1\ExcelAddIn1\obj\Release\ExcelAddIn1.UserControl1.resources
+E:\projects\ExcelAddIn1\ExcelAddIn1\obj\Release\ExcelAddIn1.csprojResolveAssemblyReference.cache

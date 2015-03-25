@@ -12,11 +12,10 @@ namespace ExcelAddIn1
 {
     public partial class ThisAddIn
     {
-        //public UserControl1 myUserControl1;
-        //public Microsoft.Office.Tools.CustomTaskPane myCustomTaskPane;
 
         private void ThisAddIn_Startup(object sender, System.EventArgs e)
         {
+
         }
 
         private void ThisAddIn_Shutdown(object sender, System.EventArgs e)
