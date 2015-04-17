@@ -50,7 +50,9 @@ namespace ExcelAddIn1
                         if (ctp.Visible == false) { ctp.Visible = true; } else { ctp.Visible = false; }
                     }
                 }
-                catch (Exception ex) { }
+                catch (Exception ex) {
+                    MessageBox.Show(ex.ToString());
+                }
                 
             }
             //no any taskpane exist
