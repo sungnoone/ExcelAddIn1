@@ -20,8 +20,8 @@ namespace ExcelAddIn1
 {
     public partial class UserControl1 : UserControl
     {
-        public string REST_HOST = "http://192.168.1.229:8088";//開發主機
-        //public string REST_HOST = "http://192.168.1.230:8088";//正式主機
+        //public string REST_HOST = "http://192.168.1.229:8088";//開發主機
+        public string REST_HOST = "http://192.168.1.230:8088";//正式主機
         public string REST_URL_CONNECT_SERVICE = "/srv/"; //測試連接服務
         public string REST_URL_CN_WORDS_BROKEN = "/vsto/cn/get/broken"; //查詢全部破音字
         public string REST_URL_CN_WORDS_BROKEN_FONT = "/vsto/cn/get/broken/font"; //查詢破音字體庫
@@ -122,6 +122,7 @@ namespace ExcelAddIn1
                     }
                 }
             }
+            MessageBox.Show("作業完成，請參考作業視窗訊息!");
         }
 
         //執行多音字體套用
@@ -211,6 +212,7 @@ namespace ExcelAddIn1
                     txtMessage.Text += "搜尋字串為空!\r\n";
                 }
             }
+            MessageBox.Show("作業完成，請參考作業視窗訊息!");
         }
 
  
