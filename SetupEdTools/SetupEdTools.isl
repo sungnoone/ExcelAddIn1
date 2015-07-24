@@ -2643,7 +2643,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1028</td><td>您的公司名稱</td><td>0</td><td/><td>-643613464</td></row>
+		<row><td>COMPANY_NAME</td><td>1028</td><td>翰林出版</td><td>0</td><td/><td>2074321136</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1028</td><td>總是安裝</td><td>0</td><td/><td>-643613464</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1028</td><td>系統顏色設定不足以執行 [ProductName]。</td><td>0</td><td/><td>-643613464</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_OS</td><td>1028</td><td>作業系統不足以執行 [ProductName]。</td><td>0</td><td/><td>-643613464</td></row>

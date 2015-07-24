@@ -18,7 +18,7 @@ namespace ExcelAddIn1
 
     public partial class Ribbon1
     {
-        public string brokenTaskPaneTitle = "北研專案";
+        public string brokenTaskPaneTitle = "北研專案 1.0";
         Microsoft.Office.Tools.CustomTaskPaneCollection thisCustomTaskPanes;
 
         private void Ribbon1_Load(object sender, RibbonUIEventArgs e)
