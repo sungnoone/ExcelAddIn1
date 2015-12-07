@@ -46,8 +46,8 @@ namespace ExcelAddIn1
         public string FIELDS_BROKEN_FONT_FIELD5 = "apply_font_name";
         
         //fields name map
-        string CN_WORDS_ID = "words_id";
-        string CN_WORDS_CONTENT = "words_content";
+        //string CN_WORDS_ID = "words_id";
+        //string CN_WORDS_CONTENT = "words_content";
 
         //Excel.Application oXL;
         Excel.Workbook oWB;
