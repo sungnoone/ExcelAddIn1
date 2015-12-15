@@ -34,6 +34,7 @@ namespace ExcelAddIn1
         protected override void OnVisibleChanged(EventArgs e)
         {
             base.OnVisibleChanged(e);
+
             if (File.Exists(defaultValFile) == true)
             {
                 try
@@ -226,9 +227,9 @@ namespace ExcelAddIn1
                     aryRows = collectRows1(realDataRange, joFilterFieldsKeys, joFilterFieldsExcludeKeys);
                 }else if(checkBox1.Checked==true && checkBox2.Checked==false){
                     aryRows = collectRows2(realDataRange, joFilterFieldsKeys);
-                }else if(checkBox1.Checked==false && checkBox2.Checked==true){
+                }else if (checkBox1.Checked == false && checkBox2.Checked == true){
                     aryRows = collectRows3(realDataRange, joFilterFieldsExcludeKeys);
-                }
+                }else {aryRows = collectRows4(realDataRange);}
                 
                 //no any row had to be catch, next source file
                 if (aryRows == null) {
@@ -508,6 +509,32 @@ namespace ExcelAddIn1
             //Include & Exclude mixed operation(Removed Exclude Rows from Include Rows)
             ArrayList aryMixedRows = mixedInExFieldsRows(arylIncludeRows, arylExcludeRows);
             return aryMixedRows;
+        }
+        
+        //all rows
+        private ArrayList collectRows4(Excel.Range operateRange)
+        {
+            if (operateRange.Equals(null))
+            {
+                return null;
+            }
+            if (operateRange.Cells.Count == 0)
+            {
+                return null;
+            }
+            //filter condition
+            //include condition
+            ArrayList arylIncludeRows = new ArrayList();
+            txtMessage.Text += operateRange.Rows[1].Address.ToString() + Environment.NewLine;
+            foreach (Excel.Range r1 in operateRange.Rows)
+            {
+                //bool rowEmpty = ifRowEmpty(r1);
+                //if (rowEmpty == false) {
+                arylIncludeRows.Add(r1.Row);
+                //}
+            }
+
+            return arylIncludeRows;
         }
 
         //find match value in column for getting rows number collection
@@ -831,7 +858,6 @@ namespace ExcelAddIn1
             if(jobject.Count==0){
                 return null;
             }
-
             //Choose the min amount json pair
             int rowMin = 1048576;
             string fName = "";
@@ -847,11 +873,13 @@ namespace ExcelAddIn1
             }
             //
             //txtMessage.Text += "Min Field Name: "+fName+" Min Number:"+rowMin+Environment.NewLine;
-            //ArrayList basicAry = new ArrayList();
+            ArrayList basicAry = new ArrayList();
             //JArray pAry = (JArray)jobject[fName];
-            //basicAry = (ArrayList)jobject[fName].ToObject(typeof(ArrayList));
+            basicAry = (ArrayList)jobject[fName].ToObject(typeof(ArrayList));
             //Intersection(fill min amount array for compare)
-            ArrayList intersection = (ArrayList)jobject[fName].ToObject(typeof(ArrayList));
+            ArrayList intersection = new ArrayList();
+            //ArrayList intersection = (ArrayList)jobject[fName].ToObject(typeof(ArrayList));
+            //for multi include filter
             foreach (var joObj in jobject){
                 string joName = (string)joObj.Key;
                 JArray jaVal = (JArray)joObj.Value;
@@ -859,13 +887,18 @@ namespace ExcelAddIn1
                 if (joName == fName) { continue; }//compare target no need to be loop
                 foreach(var poi in jaVal){//loop for every poi on jobject every jarray value
                     bool rowContain = false;
-                    foreach (var basicPoi in intersection)
+                    foreach (var basicPoi in basicAry)
                     {//loop for every poi jarray on basic array
                         // poi type:jvalue , basicPoi type:int64 , we need convert to the same type for comparing
                         if (poi.ToString() == basicPoi.ToString()) { rowContain = true; continue; }
                     }
                     if(rowContain==true){intersection.Add(poi); }
                 }
+            }
+            //only single include filter, fill basicAry as intersection
+            //if more than 2 include filter, dont't do that
+            if (jobject.Count == 1) {
+                intersection = basicAry;
             }
             //txtMessage.Text += "Intersection Count:" + intersection.Count + Environment.NewLine;
             return intersection;

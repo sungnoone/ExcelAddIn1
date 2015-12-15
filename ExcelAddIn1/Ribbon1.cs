@@ -20,7 +20,7 @@ namespace ExcelAddIn1
     {
         public string brokenTaskPaneTitle = "北研專案 1.0";
         public string dictionTaskPaneTitle = "詞語卡工具 0.4";
-        public string rewordTaskPaneTitle = "生字整合工具 0.1.25";
+        public string rewordTaskPaneTitle = "生字整合工具 0.3.1";
         Microsoft.Office.Tools.CustomTaskPaneCollection thisCustomTaskPanes;
 
         private void Ribbon1_Load(object sender, RibbonUIEventArgs e)
