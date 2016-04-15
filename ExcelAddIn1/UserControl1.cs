@@ -344,7 +344,7 @@ namespace ExcelAddIn1
         private bool checkExcelFormat(JArray jarraySource) {
             //read field define file
             string appPath = AppDomain.CurrentDomain.BaseDirectory;
-            MessageBox.Show(appPath);
+            //MessageBox.Show(appPath);
             string[] lines = System.IO.File.ReadAllLines(FILE_FIELD_DEFINE);//name define array 
             //trim string
             List<string> trimLines = new List<string>();
