@@ -31,10 +31,10 @@
     <DefineConstants>VSTO40</DefineConstants>
     <IsWebBootstrapper>False</IsWebBootstrapper>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <PublishUrl>\\vstore1\vApp\Tools\ExcelAddIn1\</PublishUrl>
+    <PublishUrl>E:\publish\ExcelAddIn1\</PublishUrl>
     <InstallUrl />
     <TargetCulture>zh-cht</TargetCulture>
-    <ApplicationVersion>1.0.0.29</ApplicationVersion>
+    <ApplicationVersion>1.0.0.30</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>1</UpdateInterval>
@@ -227,7 +227,6 @@
     <EmbeddedResource Include="UserControl3.resx">
       <DependentUpon>UserControl3.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="ExcelAddIn1_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -259,6 +258,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="fields.txt" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -270,7 +272,7 @@
     <ManifestKeyFile>ExcelAddIn1_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>4C01562B27F658A2D68CF5ED695A7C6280C85CA3</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>48E49F51D1A9E7D582B528089A055F0FE94DA666</ManifestCertificateThumbprint>
   </PropertyGroup>
   <!-- Include the build rules for a C# project. -->
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

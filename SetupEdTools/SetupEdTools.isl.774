@@ -1049,7 +1049,6 @@
 	<table name="CreateFolder">
 		<col key="yes" def="s72">Directory_</col>
 		<col key="yes" def="s72">Component_</col>
-		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT</td></row>
 	</table>
 
 	<table name="CustomAction">
@@ -1876,10 +1875,8 @@
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
 		<row><td>File1</td><td>Component1</td><td>ExcelAddIn1.主要輸出</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ExcelAddIn1&gt;|Built</td><td>3</td><td/></row>
-		<row><td>conf.txt</td><td>ISX_DEFAULTCOMPONENT</td><td>conf.txt</td><td>0</td><td/><td/><td/><td>1</td><td>E:\github_projects\ExcelAddIn1\ExcelAddIn1\bin\Release\conf.txt</td><td>1</td><td/></row>
-		<row><td>exceladdin1.dll.manifest</td><td>ISX_DEFAULTCOMPONENT</td><td>EXCELA~1.MAN|ExcelAddIn1.dll.manifest</td><td>0</td><td/><td/><td/><td>1</td><td>E:\github_projects\ExcelAddIn1\ExcelAddIn1\bin\Release\ExcelAddIn1.dll.manifest</td><td>1</td><td/></row>
-		<row><td>exceladdin1.vsto</td><td>ISX_DEFAULTCOMPONENT</td><td>EXCELA~1.VST|ExcelAddIn1.vsto</td><td>0</td><td/><td/><td/><td>1</td><td>E:\github_projects\ExcelAddIn1\ExcelAddIn1\bin\Release\ExcelAddIn1.vsto</td><td>1</td><td/></row>
-		<row><td>fields.txt</td><td>ISX_DEFAULTCOMPONENT</td><td>fields.txt</td><td>0</td><td/><td/><td/><td>1</td><td>E:\github_projects\ExcelAddIn1\ExcelAddIn1\bin\Release\fields.txt</td><td>1</td><td/></row>
+		<row><td>exceladdin1.dll.manifest</td><td>ISX_DEFAULTCOMPONENT</td><td>EXCELA~1.MAN|ExcelAddIn1.dll.manifest</td><td>0</td><td/><td/><td/><td>1</td><td>E:\projects\ExcelAddIn1\ExcelAddIn1\bin\Release\ExcelAddIn1.dll.manifest</td><td>1</td><td/></row>
+		<row><td>exceladdin1.vsto</td><td>ISX_DEFAULTCOMPONENT</td><td>EXCELA~1.VST|ExcelAddIn1.vsto</td><td>0</td><td/><td/><td/><td>1</td><td>E:\projects\ExcelAddIn1\ExcelAddIn1\bin\Release\ExcelAddIn1.vsto</td><td>1</td><td/></row>
 	</table>
 
 	<table name="FileSFPCatalog">
@@ -2337,6 +2334,12 @@
 		<row><td>WindowsFolder</td><td/><td/><td>1</td></row>
 	</table>
 
+	<table name="ISPowerShellWrap">
+		<col key="yes" def="s72">Action_</col>
+		<col key="yes" def="s72">Name</col>
+		<col def="S0">Value</col>
+	</table>
+
 	<table name="ISProductConfiguration">
 		<col key="yes" def="s72">ISProductConfiguration</col>
 		<col def="S255">ProductConfigurationFlags</col>
@@ -2640,7 +2643,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1028</td><td>翰林出版</td><td>0</td><td/><td>1646575850</td></row>
+		<row><td>COMPANY_NAME</td><td>1028</td><td>翰林出版</td><td>0</td><td/><td>2074321136</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1028</td><td>總是安裝</td><td>0</td><td/><td>-643613464</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1028</td><td>系統顏色設定不足以執行 [ProductName]。</td><td>0</td><td/><td>-643613464</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_OS</td><td>1028</td><td>作業系統不足以執行 [ProductName]。</td><td>0</td><td/><td>-643613464</td></row>
@@ -3741,8 +3744,8 @@
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1028</td><td>對於執行 [ProductName] 記憶體量不足。</td><td>0</td><td/><td>-643613464</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1028</td><td>對於執行 [ProductName] 螢幕解析度不足。</td><td>0</td><td/><td>-643613464</td></row>
 		<row><td>ID_STRING1</td><td>1028</td><td/><td>0</td><td/><td>-643613464</td></row>
-		<row><td>ID_STRING2</td><td>1028</td><td>http://www.翰林出版.com</td><td>0</td><td/><td>1646575850</td></row>
-		<row><td>ID_STRING3</td><td>1028</td><td>翰林出版</td><td>0</td><td/><td>1646575850</td></row>
+		<row><td>ID_STRING2</td><td>1028</td><td>http://www.HL.com</td><td>0</td><td/><td>-643613464</td></row>
+		<row><td>ID_STRING3</td><td>1028</td><td>HL</td><td>0</td><td/><td>-643613464</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1028</td><td>系統將不安裝此功能。</td><td>0</td><td/><td>-643613464</td></row>
 	</table>
 
@@ -3808,12 +3811,6 @@
 		<col key="yes" def="s72">Shortcut_</col>
 		<col key="yes" def="s72">Name</col>
 		<col def="s255">Value</col>
-	</table>
-
-	<table name="ISWSEWrap">
-		<col key="yes" def="s72">Action_</col>
-		<col key="yes" def="s72">Name</col>
-		<col def="S0">Value</col>
 	</table>
 
 	<table name="ISXmlElement">
@@ -3989,7 +3986,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ISTheme</td><td>InstallShield Blue.theme</td></row>
 		<row><td>ISUSLock</td><td>{17BDD2A7-D106-4465-A89D-B6C9B5192CFF}</td></row>
 		<row><td>ISUSSignature</td><td>{3D2E8DB2-8311-4B8C-A57F-F059BD4C2A33}</td></row>
-		<row><td>ISVisitedViews</td><td>viewAssistant,viewObjects,viewProject,viewRelease,viewFeatureFiles,viewRealSetupDesign,viewISToday,viewAppFiles</td></row>
+		<row><td>ISVisitedViews</td><td>viewAssistant,viewObjects,viewProject,viewRelease,viewFeatureFiles,viewRealSetupDesign,viewISToday</td></row>
 		<row><td>Limited</td><td>1</td></row>
 		<row><td>LockPermissionMode</td><td>1</td></row>
 		<row><td>MsiExecCmdLineOptions</td><td/></row>
@@ -4001,7 +3998,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>SaveAsSchema</td><td/></row>
 		<row><td>SccEnabled</td><td>0</td></row>
 		<row><td>SccPath</td><td/></row>
-		<row><td>SchemaVersion</td><td>776</td></row>
+		<row><td>SchemaVersion</td><td>774</td></row>
 		<row><td>Type</td><td>MSIE</td></row>
 	</table>
 
@@ -5131,6 +5128,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ISPathVariable</td><td>TestValue</td><td>Y</td><td/><td/><td/><td/><td>Text</td><td/><td>The test value of the path variable.</td></row>
 		<row><td>ISPathVariable</td><td>Type</td><td>N</td><td/><td/><td/><td/><td/><td>1;2;4;8</td><td>The type of the path variable.</td></row>
 		<row><td>ISPathVariable</td><td>Value</td><td>Y</td><td/><td/><td/><td/><td>Text</td><td/><td>The value of the path variable.</td></row>
+		<row><td>ISPowerShellWrap</td><td>Action_</td><td>N</td><td/><td/><td>CustomAction</td><td>1</td><td>Identifier</td><td/><td>Foreign key into CustomAction table</td></row>
+		<row><td>ISPowerShellWrap</td><td>Name</td><td>N</td><td/><td/><td/><td/><td>Text</td><td/><td>Property associated with this Action</td></row>
+		<row><td>ISPowerShellWrap</td><td>Value</td><td>Y</td><td/><td/><td/><td/><td>Text</td><td/><td>Value associated with this Property</td></row>
 		<row><td>ISProductConfiguration</td><td>GeneratePackageCode</td><td>Y</td><td/><td/><td/><td/><td>Number</td><td>0;1</td><td>Indicates whether or not to generate a package code.</td></row>
 		<row><td>ISProductConfiguration</td><td>ISProductConfiguration</td><td>N</td><td/><td/><td/><td/><td>Text</td><td/><td>The name of the product configuration.</td></row>
 		<row><td>ISProductConfiguration</td><td>ProductConfigurationFlags</td><td>Y</td><td/><td/><td/><td/><td>Text</td><td/><td>Product configuration (release) flags.</td></row>
@@ -5368,9 +5368,6 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ISVirtualShortcut</td><td>Name</td><td>N</td><td/><td/><td/><td/><td>Identifier</td><td/><td>Property name</td></row>
 		<row><td>ISVirtualShortcut</td><td>Shortcut_</td><td>N</td><td/><td/><td>Shortcut</td><td>1</td><td>Identifier</td><td/><td>Foreign key into Shortcut table.</td></row>
 		<row><td>ISVirtualShortcut</td><td>Value</td><td>N</td><td/><td/><td/><td/><td/><td/><td>Property value</td></row>
-		<row><td>ISWSEWrap</td><td>Action_</td><td>N</td><td/><td/><td>CustomAction</td><td>1</td><td>Identifier</td><td/><td>Foreign key into CustomAction table</td></row>
-		<row><td>ISWSEWrap</td><td>Name</td><td>N</td><td/><td/><td/><td/><td>Text</td><td/><td>Property associated with this Action</td></row>
-		<row><td>ISWSEWrap</td><td>Value</td><td>Y</td><td/><td/><td/><td/><td>Text</td><td/><td>Value associated with this Property</td></row>
 		<row><td>ISXmlElement</td><td>Content</td><td>Y</td><td/><td/><td/><td/><td>Text</td><td/><td>Element contents</td></row>
 		<row><td>ISXmlElement</td><td>ISAttributes</td><td>Y</td><td/><td/><td/><td/><td>Number</td><td/><td>Internal XML element attributes</td></row>
 		<row><td>ISXmlElement</td><td>ISXmlElement</td><td>N</td><td/><td/><td/><td/><td>Identifier</td><td/><td>Primary key, non-localized, internal token for Xml element</td></row>

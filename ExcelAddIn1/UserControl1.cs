@@ -14,6 +14,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Bson;
 using Newtonsoft.Json.Linq;
+using System.Data;
+using System.Data.OleDb;
+using System.Reflection;
+
 
 
 namespace ExcelAddIn1
@@ -33,6 +37,7 @@ namespace ExcelAddIn1
         public string FILE_LOG_CELL_OPERATION = @"C:\Users\Public\FILE_LOG_CELL_OPERATION.txt";
         public string PATH_TEMP = Path.GetTempPath();
         public string FILE_API_RESPONSE = "file_api_response.log";
+        public string FILE_FIELD_DEFINE = AppDomain.CurrentDomain.BaseDirectory+"\\fields.txt";
 
         //words_broken fields mappings
         public string FIELDS_BROKEN_ID = "編號";
@@ -133,7 +138,30 @@ namespace ExcelAddIn1
             //try to connect RestFul service
             JArray words;
             try {
-                words = (JArray)queryBrokenAll(REST_HOST, REST_URL_CN_WORDS_BROKEN_FONT);
+                if (rbg2_ds_file.Checked == true){
+                    //query from file
+                    openFileDialog1 = new OpenFileDialog();
+                    openFileDialog1.Multiselect = false;
+                    openFileDialog1.Filter = "*.xlsx|*.xlsx";
+                    openFileDialog1.Title = "選擇EXCEL資料檔";
+                    if (openFileDialog1.ShowDialog()==DialogResult.OK) {
+                        string user_input_file_full_path = openFileDialog1.FileName;
+                        words = (JArray)queryBrokenAll_fromExcel(user_input_file_full_path);//query from excel(JArray result)
+                        bool goodExcel = checkExcelFormat(words);//check excel format
+                        if (goodExcel==false) {
+                            //MessageBox.Show("Excel no good. return false!");
+                            return;
+                        }
+                        //MessageBox.Show("goodExcel:" + goodExcel.ToString());
+                    }
+                    else{return;}
+                }else if (rbg2_ds_db.Checked == true){
+                    //query form db
+                    words = (JArray)queryBrokenAll(REST_HOST, REST_URL_CN_WORDS_BROKEN_FONT);
+                }else {
+                    words=null;
+                    return;
+                }
             }catch(Exception ex){
                 txtMessage.Text += ex.ToString()+"服務連線失敗!!\r\n";
                 return;
@@ -215,7 +243,7 @@ namespace ExcelAddIn1
             MessageBox.Show("作業完成，請參考作業視窗訊息!");
         }
 
- 
+
         //=========================== sub function ========================================.
 
         #region sub function
@@ -310,6 +338,80 @@ namespace ExcelAddIn1
 
         }
 
+
+        //check excel format
+        //excel source must be converted to JArray ,first
+        private bool checkExcelFormat(JArray jarraySource) {
+            //read field define file
+            string appPath = AppDomain.CurrentDomain.BaseDirectory;
+            MessageBox.Show(appPath);
+            string[] lines = System.IO.File.ReadAllLines(FILE_FIELD_DEFINE);//name define array 
+            //trim string
+            List<string> trimLines = new List<string>();
+            foreach (string line in lines) {
+                string trimLine= line.Trim();
+                trimLines.Add(trimLine);
+            }
+            //get excel field name collection
+            //txtMessage.Text +="Excel Fields Name:"+Environment.NewLine;
+            List<string> excel_field_name_collection = new List<string> ();
+            //foreach (JObject content in jarraySource.Children<JObject>()) {
+            JObject jo = (JObject)jarraySource.First;            
+            foreach (JProperty prop in jo.Properties()) {
+                    excel_field_name_collection.Add(prop.Name.Trim());
+                    //txtMessage.Text += "prop:"+prop.Name+Environment.NewLine;
+                } 
+            //}
+            //if every field name definetion in source excel
+            List<string> missField = new List<string>();
+            List<string> repeatField = new List<string>();
+            List<string> goodField = new List<string>();
+            foreach (string fn in trimLines) {
+                txtMessage.Text += "fn:"+fn + Environment.NewLine;
+                //ol fieldExist = true;
+                int fieldCount = 0;
+                foreach (string head in excel_field_name_collection) {
+                    if (fn == head) {
+                        fieldCount += 1;
+                        txtMessage.Text += "head:" + head + Environment.NewLine;
+                    }
+                }
+                if (fieldCount == 0){
+                    //field not exist
+                    missField.Add(fn);
+                }
+                else if (fieldCount > 1){
+                    //>1 field exist
+                    repeatField.Add(fn);
+                }else {
+                    //only 1 field exist
+                    goodField.Add(fn);
+                }
+                //next field check
+            }
+            //show message
+            if (missField.Count>0) {
+                txtMessage.Text += "缺失欄位:" + Environment.NewLine;
+                foreach (string nameStr in missField) {
+                    txtMessage.Text +=nameStr+Environment.NewLine;
+                }
+            }
+            if (repeatField.Count>0) {
+                txtMessage.Text += "重複欄位:" + Environment.NewLine;
+                foreach (string nameStr in repeatField)
+                {
+                    txtMessage.Text += nameStr + Environment.NewLine;
+                }
+            }
+            //decide true or false
+            if (missField.Count!=0 || repeatField.Count!=0){
+                return false;
+            }else {
+                //MessageBox.Show("missField:" + missField.Count.ToString()+ "repeatField:" + repeatField.Count.ToString());
+                return true;
+            }
+        }
+
         #endregion
 
         //=========================== common function ========================================
@@ -342,6 +444,28 @@ namespace ExcelAddIn1
                 MessageBox.Show(string.Format("Status Code:{0}, Status Description:{1}", resp.StatusCode, resp.StatusDescription));
                 return null;
             }
+        }
+
+        //query data source from excel 
+        private JArray queryBrokenAll_fromExcel(string sourceFilePath) {
+            //Read from excel into string
+            //string file_full_path_name = @"E:\temp\cn_words_broken_font.xlsx";
+            string ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;;Data Source=" +sourceFilePath+";Extended Properties='Excel 12.0 xml; HDR = YES'";
+            StringBuilder stbQuery = new StringBuilder();
+            stbQuery.Append("SELECT * FROM [sheet1$]");
+            OleDbDataAdapter adp = new OleDbDataAdapter(stbQuery.ToString(), ConnectionString);
+            DataTable dt = new DataTable();
+            adp.Fill(dt);
+            string jsonStr = JsonConvert.SerializeObject(dt);
+            //convert json string into json array
+            JArray ja = JArray.Parse(jsonStr);
+            //txtMessage.Text += ja.ToString();
+            JArray trimJArray = new JArray();
+            /*
+            foreach (string trimItem in ja) {
+
+            }*/
+            return ja;
         }
 
         //cell content search & replace
@@ -485,14 +609,9 @@ namespace ExcelAddIn1
             }
         }
 
+        
+
         #endregion
-
-
-
-
-
-
-
 
     }
 }
